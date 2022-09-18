@@ -10,20 +10,22 @@
 			<param-name>applicationClass</param-name>
 			<param-value>HelloWorld</param-value>
 		</init-param>
-	</filter>
-
-	<filter-mapping>
-		<filter-name>SparkFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-	<filter>
   <filter-name>AWSXRayServletFilter</filter-name>
   <filter-class>com.amazonaws.xray.javax.servlet.AWSXRayServletFilter</filter-class>
   <init-param>
     <param-name>fixedName</param-name>
     <param-value><<CHANGE_THIS_VALUE>></param-value>
   </init-param>
+		
 </filter>
+
+	<filter-mapping>
+		<filter-name>SparkFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+
 <filter-mapping>
   <filter-name>AWSXRayServletFilter</filter-name>
   <url-pattern>*</url-pattern>
